@@ -18,9 +18,7 @@
             <div class="flex items-center">
                 <div class="hs-dropdown [--placement:top-right] [--strategy:absolute] [--auto-close:inside] relative inline-flex">
                     <button id="hs-pro-dnad" type="button" class="inline-flex shrink-0 items-center gap-x-1.5 text-start text-stone-800 rounded-full hover:text-stone-600 focus:outline-none focus:text-stone-600 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        <img class="shrink-0 size-[38px] lg:size-8 rounded-full" src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80" alt="Avatar">
-
-                        <span class="grow hidden lg:block">Kiet Chau</span>
+                        <span class="grow hidden lg:block">Inventory Management Application</span>
                     </button>
                 </div>
             </div>
