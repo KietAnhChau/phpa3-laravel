@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
 use App\Models\Product;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     // Create some dummy data
@@ -37,8 +38,6 @@ Route::get('/', function () {
         ]);
     }
 
-
-
     return view('home', [
         'name' => 'Home',
     ]);
@@ -54,7 +53,10 @@ Route::get('/manage', function () {
 })->name('manage');
 
 Route::get('/search', function () {
-    return view('search', ['name' => 'Search']);
+    return view('search', [
+        'name' => 'Search',
+        'items' => [],
+    ]);
 })->name('search');
 
 Route::get('/about', function () {
@@ -62,5 +64,7 @@ Route::get('/about', function () {
 })->name('about');
 
 
+Route::post('/manage/products/search', [SearchController::class, 'search'])->name('search.products');
 Route::resource('/manage/products', ProductController::class);
+
 
