@@ -3,19 +3,19 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
-});
+    return view('home', ['name' => 'Home']);
+})->name('home');
 
-Route::get('/Manage', function () {
-    return view('welcome');
-});
+Route::get('/manage', function () {
+    return view('manage', ['name' => 'Manage']);
+})->name('manage');
 
-Route::get('/Search', function () {
-    return view('welcome');
-});
+Route::get('/search', function () {
+    return view('search', ['name' => 'Search']);
+})->name('search');
 
-Route::get('/About', function () {
-    return view('welcome');
-});
+Route::get('/about', function () {
+    return view('about', ['name' => 'About']);
+})->name('about');
 
 
