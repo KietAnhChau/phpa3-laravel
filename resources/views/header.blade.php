@@ -1,4 +1,3 @@
-
 <nav class="bg-white border-b border-stone-200 dark:bg-neutral-800 dark:border-neutral-700" id="header">
     <div class="max-w-[85rem] flex justify-between lg:grid lg:grid-cols-3 basis-full items-center w-full mx-auto py-2.5 px-4 sm:px-6 lg:px-8">
         <div class="flex items-center">
