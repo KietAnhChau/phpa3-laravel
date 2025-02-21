@@ -1,3 +1,5 @@
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+
 <nav class="relative bg-white border-b border-stone-200 dark:bg-neutral-800 dark:border-neutral-700" id="nav">
     <div class="max-w-[85rem] flex flex-wrap justify-between gap-2 items-center w-full mx-auto lg:py-2.5 px-4 sm:px-6 lg:px-8">
 
