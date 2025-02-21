@@ -7,12 +7,16 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+
+
     public function create()
     {
         return view('manage', [
             'name' => 'Manage',
             'isCreate' => true,
             'isEdit' => false,
+            'items' => Product::all(),
         ]);
     }
 
@@ -31,6 +35,7 @@ class ProductController extends Controller
             'name' => 'Manage',
             'isCreate' => false,
             'isEdit' => false,
+            'items' => Product::all(),
         ]);
     }
 
@@ -40,6 +45,7 @@ class ProductController extends Controller
             'name' => 'Manage',
             'isCreate' => false,
             'isEdit' => true,
+            'items' => Product::all(),
         ]);
     }
 
@@ -58,6 +64,7 @@ class ProductController extends Controller
             'name' => 'Manage',
             'isCreate' => false,
             'isEdit' => false,
+            'items' => Product::all(),
         ]);
     }
 }
