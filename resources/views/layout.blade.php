@@ -12,7 +12,9 @@
     <body>
         @include("header")
         @include("nav")
-        @yield("content")
+        <div id="content" class="bg-gray-300">
+            @yield("content")
+        </div>
         @include("footer")
     </body>
 </html>
