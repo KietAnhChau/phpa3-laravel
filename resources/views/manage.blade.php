@@ -34,7 +34,7 @@
         </div>
 
         <div class="pt-3">
-            @include("components.table")
+            @include("components.table", ['items' => $items, 'isAction' => true])
         </div>
     </div>
 @endsection("content")
