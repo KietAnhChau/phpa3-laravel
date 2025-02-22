@@ -11,7 +11,7 @@
 
     <div class="overflow-x-auto [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-stone-100 [&::-webkit-scrollbar-thumb]:bg-stone-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
         <div class="min-w-full inline-block align-middle">
-            <table class="min-w-full divide-y divide-stone-200">
+            <table class="min-w-full divide-y divide-black-200">
                 <thead>
                     <tr>
                         <th scope="col" class="min-w-[150px]">
@@ -58,9 +58,9 @@
                     </tr>
                 </thead>
 
-                <tbody class="divide-y divide-stone-200">
+                <tbody class="divide-y divide-black-200">
                     @foreach($items as $product)
-                        <tr class="hover:bg-gray-400 cursor-pointer">
+                        <tr class="hover:bg-gray-400">
                             <td class="size-px py-3 px-5 relative">
                                 <div class="w-full flex items-center gap-x-3">
                                     <span class="text-sm font-medium text-stone-800">
@@ -86,15 +86,15 @@
 
                             @if($isAction)
                                 <td class="size-px whitespace-nowrap py-3 px-5">
-                                    <span class="text-sm text-stone-600">
-                                        <a href="{{ route('products.edit', ['product' => $product->id ?? 0]) }}" id="editButton" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Edit</a>
+                                <span class="text-sm text-stone-600 flex gap-2">
+                                    <a href="{{ route('products.edit', ['product' => $product->id ?? 0]) }}" id="editButton" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 flex items-center justify-center cursor-pointer">Edit</a>
 
-                                        <form action="{{ route('products.destroy', ['product' => $product->id ?? 0]) }}" method="POST" class="inline">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 ml-2">Delete</button>
-                                        </form>
-                                    </span>
+                                    <form action="{{ route('products.destroy', ['product' => $product->id ?? 0]) }}" method="POST" class="inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 flex items-center justify-center cursor-pointer">Delete</button>
+                                    </form>
+                                </span>
                                 </td>
                             @endif
                         </tr>
