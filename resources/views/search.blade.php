@@ -25,7 +25,7 @@
 
         @if($items)
             <div class="pt-3">
-                @include("components.table", ['items' => $items, 'isAction' => true])
+                @include("components.table", ['items' => $items, 'isAction' => false])
             </div>
         @endif
     </div>
