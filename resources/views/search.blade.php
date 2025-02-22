@@ -9,15 +9,15 @@
                 @csrf
                 <div>
                     <label for="search" class="block text-sm font-medium text-gray-700">Search:</label>
-                    <input type="text" id="search" name="search" value="" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <input type="text" id="search" name="search" value="{{$search ?? '' }}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <div>
                     <label for="low" class="block text-sm font-medium text-gray-700">Low:</label>
-                    <input type="text" id="low" name="low" value="0" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <input type="text" id="low" name="low" value="{{$low ?? '0' }}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <div>
                     <label for="high" class="block text-sm font-medium text-gray-700">High:</label>
-                    <input type="text" id="high" name="high" value="1" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <input type="text" id="high" name="high" value="{{$high ?? '1' }}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <button type="submit" id="formSubmitButton" class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Search</button>
             </form>
