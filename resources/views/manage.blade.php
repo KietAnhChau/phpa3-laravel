@@ -51,7 +51,6 @@
                         <input type="number" id="price" name="price" value="{{ $product->price ?? '' }}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                     </div>
                     <button type="submit" id="formSubmitButton" class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Edit</button>
-                    {{route('products.update', ['product' => $product->id ?? 0])}}
                 </form>
             </div>
         @endif
